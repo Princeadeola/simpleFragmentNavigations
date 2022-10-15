@@ -16,15 +16,15 @@ public class SectionStagePagerAdapter extends FragmentStatePagerAdapter {
         super(fragmentActivity);
     }
 
+    public void addFragment(Fragment fragment, String title){
+        fragmentList.add(fragment);
+        fragmentListTitle.add(title);
+    }
+
     @NonNull
     @Override
     public Fragment getItem(int position) {
         return fragmentList.get(position);
-    }
-
-    public void addFragment(Fragment fragment, String title){
-        fragmentList.add(fragment);
-        fragmentListTitle.add(title);
     }
 
     @Override

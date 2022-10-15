@@ -1,5 +1,6 @@
 package com.example.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +21,7 @@ public class Fragment02 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment01, container, false);
+        View view = inflater.inflate(R.layout.fragment02, container, false);
 
         btnNavFrag01 = view.findViewById(R.id.btnNav01);
         btnNavFrag02 = view.findViewById(R.id.btnNav02);
@@ -31,6 +32,7 @@ public class Fragment02 extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Moving to Fragment 01", Toast.LENGTH_SHORT).show();
+                ((MainActivity)getActivity()).setViewPager(0);
             }
         });
 
@@ -38,7 +40,7 @@ public class Fragment02 extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Moving to Fragment 02", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(0);
+                ((MainActivity)getActivity()).setViewPager(1);
             }
         });
 
@@ -46,7 +48,7 @@ public class Fragment02 extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Moving to Fragment 03", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(1);
+                ((MainActivity)getActivity()).setViewPager(2);
             }
         });
 
@@ -54,7 +56,8 @@ public class Fragment02 extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Moving to new Activity", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(2);
+                Intent intent = new Intent(getActivity(), SecondActivity.class);
+                startActivity(intent);
             }
         });
 
