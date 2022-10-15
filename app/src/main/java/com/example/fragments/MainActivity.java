@@ -25,4 +25,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new Fragment01(), "Fragment01");
         viewPager.setAdapter(adapter);
     }
+    
+    public void setViewPager(int fragmentNumber){
+        viewPager.setCurrentItem(fragmentNumber);
+    }
 }
