@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/textTitle"
-        android:text="Go to fragment 02"
+        android:text="Go to fragment 01"
         android:layout_marginTop="10dp"
         />
 
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnNav01"
-        android:text="Go to fragment 03"
+        android:text="Go to fragment 02"
         android:layout_marginTop="10dp"
         />
 
