@@ -22,7 +22,7 @@
         android:text="Go to fragment 01"
         android:layout_marginTop="10dp"
         />
-
+   
 
     <Button
         android:id="@+id/btnNav02"
